@@ -50,11 +50,13 @@ body {
 }
 
 .home {
-  height: 50vh; /* Adjust height to reduce spacing */
+  height: 50vh;
+  /* Adjust height to reduce spacing */
   display: flex;
   align-items: center;
   padding: 0 5%;
-  margin-bottom: 0; /* Remove bottom margin */
+  margin-bottom: 0;
+  /* Remove bottom margin */
 }
 
 .home-content {
@@ -98,7 +100,8 @@ body {
 }
 
 .portfolio-about {
-  padding-top: 0.5rem; /* Reduce padding to decrease space */
+  padding-top: 0.5rem;
+  /* Reduce padding to decrease space */
 }
 
 .slider-wrapper {
@@ -181,7 +184,7 @@ body {
   color: #5865F2
 }
 
-.about-content h2{
+.about-content h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #75c2ee;
@@ -251,9 +254,12 @@ body {
   margin: auto;
   display: block;
   width: 90%;
-  max-width: 1000px; /* Increase max-width */
-  border-radius: 10px; /* Add rounded corners */
-  object-fit: contain; /* Ensure the image fits within the modal */
+  max-width: 1000px;
+  /* Increase max-width */
+  border-radius: 10px;
+  /* Add rounded corners */
+  object-fit: contain;
+  /* Ensure the image fits within the modal */
 }
 
 .close {

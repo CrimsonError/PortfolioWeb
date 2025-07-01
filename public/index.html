@@ -1,105 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Hide modal on document ready
-        $("#imageModal").css("display", "none");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
 
-        // Add smooth scrolling to all buttons with the "scroll-button" class
-        $(".scroll-button").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Hide modal on document ready
+      $("#imageModal").css("display", "none");
 
-            // Store hash
-            var hash = this.hash;
+      // Add smooth scrolling to all buttons with the "scroll-button" class
+      $(".scroll-button").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              1000,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
-        });
+          // Store hash
+          var hash = this.hash;
 
-        $(".portfolio img").on("click", function () {
-          $("#fullImage").attr("src", this.src);
-          $("#imageModal").css("display", "flex");
-        });
-
-        $(".close").on("click", function () {
-          $("#imageModal").css("display", "none");
-        });
-
-        // Close modal on page refresh
-        $(window).on("beforeunload", function () {
-          $("#imageModal").css("display", "none");
-        });
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            1000,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
       });
-    </script>
-  </head>
 
-  <body>
-    <header class="header">
-      <a href="#" class="logo">CrimsonError</a>
+      $(".portfolio img").on("click", function () {
+        $("#fullImage").attr("src", this.src);
+        $("#imageModal").css("display", "flex");
+      });
 
-      <nav class="navbar">
-        <a href="index.html" class="active">Home/Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-    <section class="home">
-      <div class="home-content">
-        <h1>Hi, I'm CrimsonError</h1>
-        <h3>Game Designer and Programmer</h3>
-      </div>
-    </section>
-    <section class="portfolio-about">
-      <div class="about-content">
-        <h1>Source Engine</h1>
-        <h3>This content is created with the Source Engine, with Valve's game development tool: the Hammer Editor.</h3>
-        <a class="valve-link" href="https://developer.valvesoftware.com/wiki/Source#:~:text=Source%20is%20a%203D%20game,on%20older%2C%20less%20powerful%20hardware.">Read More Here</a>
-      </div>
-    </section>
+      $(".close").on("click", function () {
+        $("#imageModal").css("display", "none");
+      });
 
-    <section class="portfolio" id="portfolio">
-      <img id="slide-1" src="assets/images/title_backround.png" alt="My Many Renderings" />
-      <img id="slide-2" src="assets/images/diag_ele.png" alt="My Many Renderings" />
-      <img id="slide-3" src="assets/images/lower_slot.png" alt="My Many Renderings" />
-      <img id="slide-4" src="assets/images/control_room.png" alt="My Many Renderings" />
-      <img id="slide-5" src="assets/images/sub-station.png" alt="My many Renderings" />
-      <img id="slide-6" src="assets/images/transformer-station.png" alt="My Many Renderings" />
-      <img id="slide-7" src="assets/images/Portal System Failure (revolution Branch) Screenshot 2024.10.12 - 18.05.52.38.png" alt="My Many Renderings" />
-      <img id="slide-8" src="assets/images/Portal System Failure Screenshot 2024.10.26 - 21.51.34.76.png" alt="My Many Renderings" />
-      <img id="slide-9" src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.37.29.58.png" alt="My Many Renderings" />
-      <img id="slide-10" src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.38.35.04.png" alt="My Many Renderings" />
-      <img id="slide-11" src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.39.03.89.png" alt="My Many Renderings" />
-      <img id="slide-12" src="assets/images/Portal System Failure Screenshot 2024.11.03 - 20.20.35.28.png" alt="My Many Renderings" />
-      <img id="slide-13" src="assets/images/Portal System Failure Screenshot 2024.11.03 - 20.21.51.19.png" alt="My Many Renderings" />
-      <img id="slide-14" src="assets/images/Portal System Failure Screenshot 2024.11.05 - 16.50.02.40.png" alt="My Many Renderings" />
-      <img id="slide-15" src="assets/images/Portal System Failure Screenshot 2024.11.05 - 16.50.38.67.png" alt="My Many Renderings" />
-    </section>
+      // Close modal on page refresh
+      $(window).on("beforeunload", function () {
+        $("#imageModal").css("display", "none");
+      });
+    });
+  </script>
+</head>
 
-    <!-- Modal for full-size image view -->
-    <div id="imageModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="fullImage">
+<body>
+  <header class="header">
+    <a href="#" class="logo">CrimsonError</a>
+
+    <nav class="navbar">
+      <a href="index.html" class="active">Home/Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="home">
+    <div class="home-content">
+      <h1>Hi, I'm CrimsonError</h1>
+      <h3>Game Designer and Programmer</h3>
     </div>
-  </body>
+  </section>
+  <section class="portfolio-about">
+    <div class="about-content">
+      <h1>Source Engine</h1>
+      <h3>This content is created with the Source Engine, with Valve's game development tool: the Hammer Editor.</h3>
+      <a class="valve-link"
+        href="https://developer.valvesoftware.com/wiki/Source#:~:text=Source%20is%20a%203D%20game,on%20older%2C%20less%20powerful%20hardware.">Read
+        More Here</a>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <img id="slide-1" src="assets/images/title_backround.png" alt="My Many Renderings" />
+    <img id="slide-2" src="assets/images/diag_ele.png" alt="My Many Renderings" />
+    <img id="slide-3" src="assets/images/lower_slot.png" alt="My Many Renderings" />
+    <img id="slide-4" src="assets/images/control_room.png" alt="My Many Renderings" />
+    <img id="slide-5" src="assets/images/sub-station.png" alt="My many Renderings" />
+    <img id="slide-6" src="assets/images/transformer-station.png" alt="My Many Renderings" />
+    <img id="slide-7"
+      src="assets/images/Portal System Failure (revolution Branch) Screenshot 2024.10.12 - 18.05.52.38.png"
+      alt="My Many Renderings" />
+    <img id="slide-8" src="assets/images/Portal System Failure Screenshot 2024.10.26 - 21.51.34.76.png"
+      alt="My Many Renderings" />
+    <img id="slide-9" src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.37.29.58.png"
+      alt="My Many Renderings" />
+    <img id="slide-10" src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.38.35.04.png"
+      alt="My Many Renderings" />
+    <img id="slide-11" src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.39.03.89.png"
+      alt="My Many Renderings" />
+    <img id="slide-12" src="assets/images/Portal System Failure Screenshot 2024.11.03 - 20.20.35.28.png"
+      alt="My Many Renderings" />
+    <img id="slide-13" src="assets/images/Portal System Failure Screenshot 2024.11.03 - 20.21.51.19.png"
+      alt="My Many Renderings" />
+    <img id="slide-14" src="assets/images/lowerview1.png" alt="My Many Renderings" />
+    <img id="slide-15" src="assets/images/topview1.png" alt="My Many Renderings" />
+  </section>
+
+  <!-- Modal for full-size image view -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+  </div>
+</body>
+
 </html>
