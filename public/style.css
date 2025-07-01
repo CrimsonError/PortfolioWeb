@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #081b29;
+  color: #ededed;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem 10%;
+  background: #0e2d44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 1.125rem;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.2rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+}
+
+.home {
+  height: 50vh; /* Adjust height to reduce spacing */
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.home-content {
+  max-width: 37.5rem;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.home-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c43bfa;
+  text-align: center;
+}
+
+.home-content .btn-box {
+  width: 21.5rem;
+  height: 3.125rem;
+}
+
+.portfolio {
+  padding: 2rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolio img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-about {
+  padding-top: 0.5rem; /* Reduce padding to decrease space */
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 85rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  flex: 0 0 100%;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  margin: 0 0.25rem;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-button.prev {
+  left: 0;
+}
+
+.slider-button.next {
+  right: 0;
+}
+
+.about-content {
+  color: #ffb300;
+  margin: auto;
+  text-align: center;
+}
+
+.about-content a:link {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.about-content {
+  max-width: 100%;
+}
+
+.about-content h1 {
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #5865F2
+}
+
+.about-content h2{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #75c2ee;
+}
+
+.about-content h3 {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.contact-info h3 {
+  font-size: 3rem;
+  color: #5865F2;
+}
+
+.contact-info img {
+  width: 20%;
+}
+
+.contact-info h2 {
+  font-size: 22px;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0e2d44;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #154264;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1000px; /* Increase max-width */
+  border-radius: 10px; /* Add rounded corners */
+  object-fit: contain; /* Ensure the image fits within the modal */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
