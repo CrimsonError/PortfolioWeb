@@ -10,32 +10,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
-      // Hide modal on document ready
       $("#imageModal").css("display", "none");
 
-      // Add smooth scrolling to all buttons with the "scroll-button" class
       $(".scroll-button").on("click", function (event) {
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-          // Prevent default anchor click behavior
           event.preventDefault();
 
-          // Store hash
           var hash = this.hash;
 
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
           $("html, body").animate(
             {
               scrollTop: $(hash).offset().top,
             },
             1000,
             function () {
-              // Add hash (#) to URL when done scrolling (default click behavior)
               window.location.hash = hash;
             }
           );
-        } // End if
+        }
       });
 
       $(".portfolio img").on("click", function () {
@@ -68,9 +60,9 @@
   <section class="home">
     <div class="home-content">
       <h1>Hi, I'm CrimsonError</h1>
-      <h3>Environment Artist and Programmer</h3>
+      <h3>He/Him, Environment Artist</h3>
     </div>
-    <img id="main-img" src="assets/images/lowerview1.png" alt="My Many Renderings" />
+    <img id="main-img" src="assets/images/pfp3.png" alt="profile" />
   </section>
   <section class="portfolio-about">
     <div class="about-content">
@@ -86,15 +78,13 @@
     <img src="assets/images/title_backround.png" alt="My Many Renderings" />
     <img src="assets/images/diag_ele.png" alt="My Many Renderings" />
     <img src="assets/images/lower_slot.png" alt="My Many Renderings" />
-    <img src="assets/images/control_room.png" alt="My Many Renderings" />
+    <img src="assets/images/overgrown1.png" alt="My Many Renderings" />
     <img src="assets/images/sub-station.png" alt="My many Renderings" />
-    <img src="assets/images/transformer-station.png" alt="My Many Renderings" />
-    <img src="assets/images/Portal System Failure Screenshot 2024.10.26 - 21.51.34.76.png" alt="My Many Renderings" />
-    <img src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.37.29.58.png" alt="My Many Renderings" />
-    <img src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.38.35.04.png" alt="My Many Renderings" />
-    <img src="assets/images/Portal System Failure Screenshot 2024.10.27 - 21.39.03.89.png" alt="My Many Renderings" />
-    <img src="assets/images/Portal System Failure Screenshot 2024.11.03 - 20.20.35.28.png" alt="My Many Renderings" />
-    <img src="assets/images/Portal System Failure Screenshot 2024.11.03 - 20.21.51.19.png" alt="My Many Renderings" />
+    <img src="assets/images/intro1.png" alt="My Many Renderings" />
+    <img src="assets/images/lobby1.png" alt="My Many Renderings" />
+    <img src="assets/images/overgrown2.png" alt="My Many Renderings" />
+    <img src="assets/images/overgrown3.png" alt="My Many Renderings" />
+    <img src="assets/images/overgrown4.png" alt="My Many Renderings" />
     <img src="assets/images/lowerview1.png" alt="My Many Renderings" />
     <img src="assets/images/topview1.png" alt="My Many Renderings" />
   </section>
