@@ -315,6 +315,11 @@ body {
   color: #fff;
 }
 
+#mail {
+  height: 156px;
+  width: 156px;
+}
+
 .contact-info img {
   width: 20%;
 }
